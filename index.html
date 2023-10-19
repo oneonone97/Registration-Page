@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Registration Page</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        div{
+            background-color: orange;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        input{
+            font-size: 35px;
+            color: antiquewhite;
+            width: 950px;
+        }
+        label{
+            font-size: larger;
+            font-weight:bolder;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Book A CALL</h1>
+
+        <p>Book a Call Slot with our Receptionist. Our will call you within 1 hour of selected time</p>
+        <hr>
+        <form action="#" onsubmit="onsignup(event)">
+            <label>Name</label>
+            <br>
+            <input type="text"name="username" required>
+            <br>
+            <label>Email</label>
+            <br>
+            <input type="email"name="email" required>
+            <br>
+            <label>Phone:</label>
+            <br>
+            <input type="number"name="phone" required>
+            <br>
+            <label>Time for Call</label>
+            <br>
+            <input type="date" name="datetime" required>
+            <input type="time" name="time" required>
+            <br>
+            <br>
+            <button>GET A CALL</button>
+            
+        </form>
+
+        <br>
+
+        <form action="">
+            <input type="text">
+        </form>
+    </div>
+    
+
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="mouse">Mouse over me</h1>
+    <!-- Click Event -->
+    <p id="click">Click me.</p>
+
+    <!-- Form Validation -->
+
+    <form id="my-form">
+        <h1>Add User</h1>
+        <div class="msg"></div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+        </div>
+
+        <input class="btn" type="submit" value="Submit">
+
+
+    </form>
+
+
+
+<script>
+    // Mouse Over and Mouse Out Event
+    document.getElementById("mouse").onmouseover = function() {mouseOver()};
+    document.getElementById("mouse").onmouseout = function() {mouseOut()};
+
+    function mouseOver() {
+    document.getElementById("mouse").style.color = "red";
+}
+
+    function mouseOut() {
+    document.getElementById("mouse").style.color = "black";
+}
+// Click Events
+    document.getElementById("click").onclick = function() {myFunction()};
+
+    function myFunction() {
+    document.getElementById("click").innerHTML = "YOU CLICKED ME!";
+}
+
+// Form Values in the Output
+const myForm = document.querySelector('#my-form');
+const nameInput= document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
+
+myForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e){
+    e.preventDefault();
+
+    if(nameInput.value === '' || emailInput.value ===''){
+        msg.innerHTML = 'Please Enter all fields';
+    } else{
+        console.log('success');
+    }
+}
+
+
+</script>
+</body>
+</html>
